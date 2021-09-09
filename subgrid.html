@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Css Grid</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 5px;
+        height: 100vh;
+      }
+
+      .item {
+        border: 1px solid #f00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item-a {
+        grid-column: 1/5;
+        background-color: burlywood;
+      }
+
+      .item-b {
+        grid-row: 2/4;
+        grid-column: 1/5;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+        background-color: crimson;
+      }
+
+      .item-d {
+        grid-column: 1/5;
+        background-color: darkblue;
+      }
+
+      article {
+        background-color: cadetblue;
+        border: 1px solid #333;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media screen and (min-width: 768px) {
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="item item-a">A</div>
+      <div class="item item-b">
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+        <article>D</article>
+      </div>
+      <div class="item item-d">C</div>
+    </main>
+  </body>
+</html>
